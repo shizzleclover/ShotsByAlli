@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShotsByAlli | Professional Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- For scroll animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Marcellus&display=swap">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ShotsByAlli</div>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <br>
+    
+        <div class="theme-toggle" aria-label="Theme Toggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Capturing Life's Beautiful Moments</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Professional photography that tells your story</p>
+            <button class="cta-button" data-aos="fade-up" data-aos-delay="400">View Portfolio</button>
+        </div>
+    </header>
+
+    <section id="portfolio" class="portfolio">
+        <h2 data-aos="fade-up">Portfolio</h2>
+        <div class="gallery">
+            <!-- Image grid will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <section id="about" class="about">  
+        <div class="about-content">
+            <img src="photographer.jpg" alt="Photographer" data-aos="fade-right">
+            <div class="about-text" data-aos="fade-left">
+                <h2>About Me</h2>
+                <p>Passionate photographer with over 10 years of experience capturing life's precious moments.</p>
+                <ul class="specialties">
+                    <li>Wedding Photography</li>
+                    <li>Portrait Sessions</li>
+                    <li>Landscape Photography</li>
+                    <li>Event Coverage</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section-padding">
+        <h2 data-aos="fade-up">What Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card" data-aos="fade-up">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p>"Working with ShotsByAlli was an absolute dream. They captured our wedding day perfectly!"</p>
+                <div class="client-info">
+                    <img src="https://via.placeholder.com/60" alt="Sarah Johnson">
+                    <div>
+                        <h4>Sarah Johnson</h4>
+                        <span>Wedding Client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p>"The attention to detail and creativity in every shot is simply outstanding."</p>
+                <div class="client-info">
+                    <img src="https://via.placeholder.com/60" alt="Michael Chen">
+                    <div>
+                        <h4>Michael Chen</h4>
+                        <span>Portrait Session</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p>"They have a unique ability to capture genuine moments and emotions."</p>
+                <div class="client-info">
+                    <img src="https://via.placeholder.com/60" alt="Emma Davis">
+                    <div>
+                        <h4>Emma Davis</h4>
+                        <span>Family Photoshoot</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 data-aos="fade-up">Get in Touch</h2>
+        <form class="contact-form" data-aos="fade-up">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About PhotoVision</h3>
+                <p>Capturing life's precious moments with artistic vision and professional excellence. Your memories deserve to be preserved beautifully.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-camera"></i> Wedding Photography</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Portrait Sessions</a></li>
+                    <li><a href="#"><i class="fas fa-mountain"></i> Landscape Photography</a></li>
+                    <li><a href="#"><i class="fas fa-glass-cheers"></i> Event Coverage</a></li>
+                    <li><a href="#"><i class="fas fa-building"></i> Commercial Shoots</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Photography St, City, Country</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 234 567 890</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@shotsbyalli.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShotsByAlli. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
