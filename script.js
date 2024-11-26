@@ -4,14 +4,20 @@ AOS.init({
     once: true
 });
 
+// Add Cloudinary configuration
+const cloudinaryConfig = {
+    cloudName: 'your_cloud_name',
+    uploadPreset: 'your_preset'
+};
+
 // Sample gallery images
 const galleryImages = [
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg',
-    'image4.jpg',
-    'image5.jpg',
-    'image6.jpg'
+    'https://res.cloudinary.com/your_cloud_name/image/upload/v1/gallery/image1.jpg',
+    'https://res.cloudinary.com/your_cloud_name/image/upload/v1/gallery/image2.jpg',
+    'https://res.cloudinary.com/your_cloud_name/image/upload/v1/gallery/image3.jpg',
+    'https://res.cloudinary.com/your_cloud_name/image/upload/v1/gallery/image4.jpg',
+    'https://res.cloudinary.com/your_cloud_name/image/upload/v1/gallery/image5.jpg',
+    'https://res.cloudinary.com/your_cloud_name/image/upload/v1/gallery/image6.jpg'
 ];
 
 // Populate gallery
@@ -64,11 +70,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Form submission handler
 const form = document.querySelector('.contact-form');
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    alert('Message sent successfully!');
-    form.reset();
+    try {
+        const response = await fetch('https://formspree.io/f/your_form_id', {
+            method: 'POST',
+            body: new FormData(e.target),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (response.ok) {
+            alert('Message sent successfully!');
+            e.target.reset();
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error sending message. Please try again.');
+    }
 });
 
 // Theme Toggle
@@ -141,3 +160,15 @@ const loadGallery = () => {
 };
 
 loadGallery();
+
+// Add Cloudinary upload widget
+const uploadWidget = cloudinary.createUploadWidget({
+    cloudName: 'your_cloud_name',
+    uploadPreset: 'your_preset',
+    sources: ['local', 'url', 'camera'],
+    multiple: true
+}, (error, result) => {
+    if (!error && result && result.event === "success") {
+        console.log('Image uploaded successfully:', result.info.secure_url);
+    }
+});
